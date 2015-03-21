@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="<%class:fw_define:define_plugins%>/<%request:plugins%>/css/contents.css">
+<link rel="stylesheet" type="text/css" href="<%class:fw_define:define_plugins%>/<%request:plugins%>/css/table.css">
+
+<form method="post" name="form1">
+	<input type="hidden" name="mode" value="regist">
+
+	<div class="inputArea">
+		<input type="text" name="url" value="" placeholder="http://www.example.com/"><input type="submit" value="Add">
+	</div>
+</form>
+
+<table>
+	<tr>
+		<th>No.</th>
+		<th>Flg</th>
+		<th>ID</th>
+		<th>Protocol</th>
+		<th>Domain</th>
+		<th>URL</th>
+		<th>Entry-Date</th>
+	</tr>
+<%class:libTable:viewCsv2Table(access.csv,none)%>
+</table>
